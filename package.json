@@ -1,0 +1,48 @@
+{
+  "name": "electronupdate",
+  "version": "1.0.0",
+  "description": "electron Updates",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "mac": "electron-builder -m",
+    "win": "electron-builder -w",
+    "build": "electron-builder -mwl",
+    "publish-mac": "electron-builder build -m -p onTagOrDraft"
+  },
+  "build": {
+    "appId": "com.applecool.electron",
+    "directories": {
+      "buildResources": "."
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "zip",
+        "dmg",
+        "pkg"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dippy1988-deependra/updateElectron",
+    "GH_TOKEN": " bd97533d19f3b12b058a18a734edfb5759a85f1b"
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "electron-log": "2.2.17",
+    "electron-updater": "4.0.5"
+  },
+  "devDependencies": {
+    "electron": "3.0.10",
+    "electron-builder": "20.38.2"
+  },
+  "author": "zeke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dippy1988-deependra/electron-chatApp/issues"
+  },
+  "homepage": "https://github.com/dippy1988-deependra/electron-chatApp#readme"
+}
